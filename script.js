@@ -28,7 +28,11 @@ goToBookings();
 //Moteur de recherche
 function searchTrip () {
     document.querySelector('#btn-search').addEventListener('click', function() {
-        
+        fetch('http://localhost:3000/trips')
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);
+        });
     });
 };
   
