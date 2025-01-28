@@ -1,0 +1,70 @@
+body {
+    margin: 0;
+}
+
+#container {
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+    grid-template-rows: repeat(12, 1fr);
+    grid-template-columns: repeat(12, 1fr);
+}
+
+#header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 13;
+    background-color: white;
+}
+
+#pages {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: blueviolet;
+}
+
+#tickethack {
+    background-color: blue;
+}
+
+#cart {
+    background-color: aqua;
+}
+
+#bookings {
+    background-color: grey;
+}
+
+#title {
+    text-align: center;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 13;
+    background-color: green;
+}
+
+#boxes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    grid-row-start: 3;
+    grid-row-end: 10;
+    grid-column-start: 1;
+    grid-column-end: 13;
+    background-color: red;
+}
+
+#search {
+    background-color: orange;
+}
+
+#available-trips {
+    background-color: yellow;
+}

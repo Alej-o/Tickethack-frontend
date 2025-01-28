@@ -10,17 +10,28 @@
 
 <body>
     <div id="container">
-        <img src="./images/background.jpg" alt="Background image of train tracks">
-        <div id="header">Header
-            <div id="logo">Logo</div>
-            <div id="pages">Pages</div>
+        <!-- <img src="./images/background.jpg" alt="Background image of train tracks"/> -->
+        <div id="header">
+            <h1 id="tickethack">Tickethack</h1>
+            <div id="pages">
+                <h3 id="cart">Cart</h3>
+                <h3 id="bookings">Bookings</h3>
+            </div>
         </div>
-        <div id="title">Title
+        <div id="title">
+            <h2>Explore the world effortlessly by train!</h2> 
+            <h3>Compare, book and enjoy cheap prices for train tickets: your journey starts on Tickethack.</h3>
         </div>
-        <div id="boxes">Boxes
-            <div id="search">Search</div>
-            <div id="available-trips">Available trips
+        <div id="boxes">
+            <div id="search">
+                <input id="search-departure" type="text" placeholder="Departure" />
+                <input id="search-arrival" type="text" placeholder="Arrival" />
+                <input id="calendar" type="date" placeholder="Calendar" />
+                <button type="button" id="btn-search">Search</button>
+            </div>
+            <div id="available-trips">
                 <img src="./images/train.png" alt="Train logo"/>
+                <p>It's time to book your future trip.</p>
             </div>
         </div>
     </div>
