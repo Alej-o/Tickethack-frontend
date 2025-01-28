@@ -8,12 +8,13 @@ body {
     width: 100vw;
     grid-template-rows: repeat(12, 1fr);
     grid-template-columns: repeat(12, 1fr);
+    background-image: url('./images/background.jpg');
+    background-size: cover;
 }
 
 #header {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     grid-row-start: 1;
     grid-row-end: 2;
@@ -25,20 +26,15 @@ body {
 #pages {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    background-color: blueviolet;
+    justify-content: space-around;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif
 }
 
 #tickethack {
-    background-color: blue;
-}
-
-#cart {
-    background-color: aqua;
-}
-
-#bookings {
-    background-color: grey;
+    color: green;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif
 }
 
 #title {
@@ -47,7 +43,9 @@ body {
     grid-row-end: 3;
     grid-column-start: 1;
     grid-column-end: 13;
-    background-color: green;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
 }
 
 #boxes {
@@ -58,13 +56,40 @@ body {
     grid-row-end: 10;
     grid-column-start: 1;
     grid-column-end: 13;
-    background-color: red;
 }
 
 #search {
-    background-color: orange;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-radius: 15px;
+    background-color: white;
 }
 
 #available-trips {
-    background-color: yellow;
+    border-radius: 15px;
+    background-color: white;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+#btn-search {
+    color: white;
+    background-color: green;
+}
+
+#search-departure {
+    background-color: lightgrey;
+}
+
+#search-arrival {
+    background-color: lightgrey;
+}
+
+#calendar {
+    background-color: lightgrey;
+}
+
+p {
+    text-align: center;
 }
