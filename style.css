@@ -14,7 +14,7 @@ body {
 
 #header {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     grid-row-start: 1;
     grid-row-end: 2;
@@ -23,24 +23,27 @@ body {
     background-color: white;
 }
 
-#pages {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif
-}
-
 #tickethack {
     color: green;
     font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 40px;
+}
+
+#pages {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-right: 40px;
+    width: 150px;
 }
 
 #title {
     text-align: center;
     grid-row-start: 2;
-    grid-row-end: 3;
+    grid-row-end: 5;
     grid-column-start: 1;
     grid-column-end: 13;
     font-weight: bold;
@@ -51,43 +54,73 @@ body {
 #boxes {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    grid-row-start: 3;
-    grid-row-end: 10;
+    justify-content: center;
+    grid-row-start: 5;
     grid-column-start: 1;
     grid-column-end: 13;
 }
 
-#search {
+#left-box {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     border-radius: 15px;
     background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 250px;
+    padding: 30px;
+    margin-right: 100px
 }
 
-#available-trips {
-    border-radius: 15px;
-    background-color: white;
-    font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif
+#departure-arrival-calendar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 150px;
+}
+
+#departure-arrival {
+    display: flex;
+    flex-direction: column;
+}
+
+#button {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.search {
+    background-color: lightgrey;
+    height: 25px;
+    border-radius: 5px;
+}
+
+#calendar {
+    background-color: lightgrey;
+    height: 25px;
+    border-radius: 5px;
 }
 
 #btn-search {
     color: white;
     background-color: green;
+    height: 25px;
+    border-radius: 5px;
 }
 
-#search-departure {
-    background-color: lightgrey;
+#right-box {
+    border-radius: 15px;
+    background-color: white;
+    width: 300px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 100px;
 }
 
-#search-arrival {
-    background-color: lightgrey;
-}
-
-#calendar {
-    background-color: lightgrey;
+img {
+    width: 40%;
+    height: auto;
 }
 
 p {

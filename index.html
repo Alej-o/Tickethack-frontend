@@ -25,14 +25,20 @@
         </div>
 
         <div id="boxes">
-            <div id="search">
-                <input id="search-departure" type="text" placeholder="Departure" />
-                <input id="search-arrival" type="text" placeholder="Arrival" />
-                <input id="calendar" type="date" placeholder="Calendar" />
-                <button type="button" id="btn-search">Search</button>
+            <div id="left-box">
+                <div id="departure-arrival-calendar">
+                    <div id="departure-arrival">
+                        <input class="search" type="text" placeholder="Departure" />
+                        <input class="search" type="text" placeholder="Arrival" />
+                    </div>
+                    <input id="calendar" type="date" placeholder="Calendar" />
+                </div>
+                <div id="button">
+                    <button type="button" id="btn-search">Search</button>
+                </div>
             </div>
-            <div id="available-trips">
-                <img src="./images/train.png" alt="Train logo"/>
+            <div id="right-box">
+                <img id="train-logo" src="./images/train.png" alt="Train logo"/>
                 <p>It's time to book your future trip.</p>
             </div>
         </div>
