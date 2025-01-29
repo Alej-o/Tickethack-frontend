@@ -26,32 +26,32 @@ function goToBookings () {
 goToBookings();
 
 // Moteur de recherche
-function searchTrip () {
-    document.querySelector('#btn-search').addEventListener('click', function() {
-        const departure = document.querySelector('#search-departure').value;       
-        const arrival = document.querySelector('#search-arrival').value;
+// function searchTrip () {
+//     document.querySelector('#btn-search').addEventListener('click', function() {
+//         const departure = document.querySelector('#search-departure').value;       
+//         const arrival = document.querySelector('#search-arrival').value;
 
-        fetch('http://localhost:3000/trips')
-            .then(response => response.json())
-            .then(data => {
-                if (!data.trips) {
-                    document.querySelector('#train-logo').src = './images/notfound.png';
-                    document.querySelector('p').textContent = 'No trip found.'
-                } else {
-                    document.querySelector('#right-box').innerHTML += `
-                    <div id="right-box">
-				        <p class="trip">${data.trips.departure}<span>></span>${data.trips.arrival}</p>
-				        <p class="hours">${data.trips.date}</p>
-                        <p class="price">${data.trips.price}°C</p>
-				    </div>
-				<button class="deleteCity" id="${data.weather.id}">Delete</button>
-                     </div>
+//         fetch('http://localhost:3000/trips')
+//             .then(response => response.json())
+//             .then(data => {
+//                 if (!data.trips) {
+//                     document.querySelector('#train-logo').src = './images/notfound.png';
+//                     document.querySelector('p').textContent = 'No trip found.'
+//                 } else {
+//                     document.querySelector('#right-box').innerHTML += `
+//                     <div id="right-box">
+// 				        <p class="trip">${data.trips.departure}<span>></span>${data.trips.arrival}</p>
+// 				        <p class="hours">${data.trips.date}</p>
+//                         <p class="price">${data.trips.price}°C</p>
+// 				    </div>
+// 				<button class="deleteCity" id="${data.weather.id}">Delete</button>
+//                      </div>
                     
-                    `
-                };
-            });
-    });
-};
+//                     `
+//                 };
+//             });
+//     });
+// };
 function searchTrip() {
     document.querySelector('#btn-search').addEventListener('click', function() {
         const departure = document.querySelector('#search-departure').value;       
