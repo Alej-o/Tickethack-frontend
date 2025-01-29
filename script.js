@@ -16,8 +16,9 @@ function goToCart () {
                 if (!data) {
                     window.location.href = "cart.html";
                 } else {
+                    console.log(data)
                     window.location.href = "cart.html";
-                    document.querySelector('#container-trip').innerHTML += `
+                    document.querySelector('.center-box-cart').innerHTML = `
                         <div class="new-trip-box">
                             <h4>My cart</h4>
                                 <div id="new-trip">
@@ -27,7 +28,7 @@ function goToCart () {
                                     <button type="button" id="btn-delete">X</button>
                                 </div>
                                 <div id="total">
-                                    <h4>Total: ${sommetotale/*fonction à créer*/}euros</h4>
+                                    <h4>Total: ${sommetotale/*fonction à créer*/}€</h4>
                                     <button type="button" id="btn-purchase">Purchase</button>
                                 </div>
                             </div>
