@@ -16,6 +16,7 @@ function goToCart () {
                 if (!data) {
                     window.location.href = "cart.html";
                 } else {
+                    window.location.href = "cart.html";
                     document.querySelector('#container-trip').innerHTML += `
                         <div class="new-trip-box">
                             <div id="new-trip">
