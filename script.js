@@ -56,7 +56,7 @@ function goToBookings () {
 };
   
 goToBookings();
-
+//Ppour trouver tous les trajets
 function searchTrip() {
     document.querySelector('#btn-search').addEventListener('click', function() {
         const inputs = document.querySelectorAll('.search');
@@ -97,7 +97,7 @@ function searchTrip() {
                 });
 
                 
-                cartTrip();
+                bookTrip();
             });
     });
 }
@@ -105,7 +105,7 @@ function searchTrip() {
 searchTrip();
 
 // Gestion des boutons de réservation
-function cartTrip() {
+function bookTrip() {
     document.querySelectorAll('.book-button').forEach(button => {
         button.addEventListener('click', function() {
             const tripId = this.getAttribute('data-trip-id');
@@ -125,7 +125,7 @@ function cartTrip() {
                     console.error('Erreur lors de l’ajout au panier:', data.error);
                 }
             })
-            .catch(error => console.error('Erreur fetch:', error)); 
+    
         });
     });
 }
