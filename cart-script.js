@@ -26,19 +26,18 @@ function deployCart() {
                 return;
             }
             let cartHTML = `
-                <div class="new-trip-box">
-                    <h4>My cart</h4>
-                    <div id="new-trip">
+                <h4>My cart</h4>
+                <div id="new-trip">                   
             `;
 
             data.cart.forEach((cart, index) => {
                 cartHTML += `
-                    <div class="trip-item">
-                        <h4>${cart.trip.departure} > ${cart.trip.arrival}</h4>
-                        <h4>${new Date(cart.trip.date).toLocaleString('fr-FR')}</h4>
-                        <h4>€${cart.trip.price}</h4>
-                        <button type="button" id="btn-delete" data-index="${index}">X</button>
-                    </div>
+                <div id="whatever">                    
+                    <h4>${cart.trip.departure} > ${cart.trip.arrival}</h4>
+                    <h4>${new Date(cart.trip.date).toLocaleString('fr-FR')}</h4>
+                    <h4>€${cart.trip.price}</h4>
+                    <button type="button" id="btn-delete" data-index="${index}">X</button>
+                </div>
                 `;
             });
 
@@ -49,7 +48,7 @@ function deployCart() {
                         <h4>Total: €${totalPrice}</h4>
                         <button type="button" id="btn-purchase">Purchase</button>
                     </div>
-                </div>
+                
             `;
 
             document.querySelector('.center-box-cart').innerHTML = cartHTML;

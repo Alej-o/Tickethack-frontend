@@ -127,6 +127,7 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+
 }
 
 img {
@@ -162,7 +163,7 @@ p {
 
 .center-box-cart {
     text-align: center;
-    height: 20%;
+    height: 50%;
     width: 65%;
     font-weight: bold;
     background-color: white;
@@ -172,13 +173,22 @@ p {
 
 #new-trip {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-around;
-    background-color: lightgrey;
+    background-color: white;
     margin-left: 150px;
     margin-right: 150px;
     margin-bottom: 30px;
     border-radius: 5px;
+}
+
+#whatever {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border-radius: 10px;
+    margin: 10px;
+    background-color: lightgrey;
 }
 
 #total {
