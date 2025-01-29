@@ -5,7 +5,11 @@ function goToIndex () {
         fetch('http://localhost:3000/trips')
 	    .then(response => response.json())
 	    .then(data => {
-    
+            if(data.trips){
+                document.querySelector('').innerHTML += `
+				
+			`;
+            }
     
         })
     });
