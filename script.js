@@ -33,15 +33,12 @@ function searchTrip() {
         fetch(`http://localhost:3000/trips?${searchParams.toString()}`)
             .then(response => response.json())
             .then(data => {
-                const rightBox = document.querySelector('#right-box');
-                rightBox.innerHTML = '';
-            
                 if (!data.trips || data.trips.length === 0) {
-                    document.querySelector('#train-logo').src = './images/notfound.png';
-                    rightBox.innerHTML = '<p>No trip found.</p>';
-                    return;
+                    document.querySelector('#right-box').innerHTML = '<p>No trip found.</p>';
+                    document.querySelector('#train-logo').src = "./images/notfound.png";
+                     return;
                 }
-            
+    
                 data.trips.forEach(trip => {
                     const tripDate = new Date(trip.date);
                     const time = tripDate.toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' });
