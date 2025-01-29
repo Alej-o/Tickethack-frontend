@@ -25,7 +25,12 @@ function goToCart () {
                                 <h4>${data.price}</h4>
                                 <button type="button" id="btn-delete">X</button>
                             </div>
-                        </div>`
+                        </div>`;
+                    // document.querySelectorAll('#btn-delete').forEach(btn => {
+                    //     btn.addEventListener('click', function(event) {
+                    //         event.target.closest('.new-trip-box').remove();
+                    //     });
+                    // });
                 }
             })
         
