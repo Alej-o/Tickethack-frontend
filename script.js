@@ -117,14 +117,7 @@ function bookTrip() {
                 },
                 body: JSON.stringify({ tripId: tripId })  
             })
-            .then(response => response.json())
-            .then(data => {
-                if (data.result) {  
-                    window.location.href = '/carts';
-                } else {
-                    console.error('Erreur lors de l’ajout au panier:', data.error);
-                }
-            })
+           
     
         });
     });
