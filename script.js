@@ -16,6 +16,7 @@ function goToCart () {
                 if (!data) {
                     window.location.href = "cart.html";
                 } else {
+                    window.location.href = "cart.html";
                     document.querySelector('#container-trip').innerHTML += `
                         <div class="new-trip-box">
                             <div id="new-trip">
@@ -60,13 +61,13 @@ function searchTrip() {
             .then(data => {
                 const rightBox = document.querySelector('#right-box');
                 rightBox.innerHTML = '';
-
+            
                 if (!data.trips || data.trips.length === 0) {
                     document.querySelector('#train-logo').src = './images/notfound.png';
                     rightBox.innerHTML = '<p>No trip found.</p>';
                     return;
                 }
-
+            
                 data.trips.forEach(trip => {
                     const tripDate = new Date(trip.date);
                     const time = tripDate.toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' });
@@ -79,37 +80,39 @@ function searchTrip() {
                             <button class="book-button" data-trip-id="${trip._id}">Book</button>
                         </div>
                     `;
-                    cartTrip()
                 });
-               
-            })
+
+                
+                cartTrip();
+            });
     });
 }
 
 searchTrip();
 
- // Gestion des boutons de réservation
- function cartTrip() {
-                document.querySelectorAll('.book-button').forEach(button => {
-                    button.addEventListener('click', function() {
-                        const tripId = this.getAttribute('data-trip-id');
-                        fetch('http://localhost:3000/carts', {
-                            method: 'POST',
-                            headers: {
-                                'Content-Type': 'application/json'
-                            },
-                            body: JSON.stringify({ tripId: tripId })
-                        })
-                        .then(response => response.json())
-                        .then(data => {
-                            if (data.success) {
-                                window.location.href = '/carts';
-                            }
-        
-                    });
-                });
-                });
-            }
-            cartTrip()
+// Gestion des boutons de réservation
+function cartTrip() {
+    document.querySelectorAll('.book-button').forEach(button => {
+        button.addEventListener('click', function() {
+            const tripId = this.getAttribute('data-trip-id');
 
-// 
+            fetch('http://localhost:3000/carts/save', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ tripId: tripId })  
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.result) {  
+                    window.location.href = '/carts';
+                } else {
+                    console.error('Erreur lors de l’ajout au panier:', data.error);
+                }
+            })
+            .catch(error => console.error('Erreur fetch:', error)); 
+        });
+    });
+}
+
