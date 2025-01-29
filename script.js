@@ -10,10 +10,27 @@ goToIndex();
 //Aller sur la page "Cart"
 function goToCart () {
     document.querySelector('#cart').addEventListener('click', function() {
-        window.location.href = "cart.html";
+        fetch('http://localhost:3000/carts')
+            .then(response => response.json())
+            .then(data => {
+                if (!data) {
+                    window.location.href = "cart.html";
+                } else {
+                    document.querySelector('#container-trip').innerHTML += `
+                        <div class="new-trip-box">
+                            <div id="new-trip">
+                                <h4>${data.departure} > ${data.arrival}</h4>
+                                <h4>${data.date}</h4>
+                                <h4>${data.price}</h4>
+                                <button type="button" id="btn-delete">X</button>
+                            </div>
+                        </div>`
+                }
+            })
+        
     });
 };
-  
+
 goToCart();
 
 //Aller sur la page "Bookings"
@@ -86,24 +103,4 @@ function searchTrip() {
     // });
 // }
 
-function bookTrip() {
-    document.querySelector('#btn-book').addEventListener('click', function() {
-      const departure = document.querySelector('#search-departure').value;       
-      const arrival = document.querySelector('#search-arrival').value;
-      const date = document.querySelector('#').value;
-      const price = document.querySelector().value;
-      document.querySelector('#containertrip').innerHTML += `
-        <div class="new-trip-box">
-            <div id="new-trip">
-                <h4>${departure} > ${arrival}</h4>
-                <h4>${date}</h4>
-                <h4>${price}</h4>
-                <button type="button" id="btn-delete">X</button>
-            </div>
-        </div>`
-      resetInputAddMessage();
-      deleteMessage();
-      countMessage();
-    })
-  }
-     bookTrip()
+// 
