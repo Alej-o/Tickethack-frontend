@@ -2,16 +2,6 @@
 function goToIndex () {
     document.querySelector('#tickethack').addEventListener('click', function() {
         window.location.href = "index.html";
-        fetch('http://localhost:3000/trips')
-	    .then(response => response.json())
-	    .then(data => {
-            if(data.trips){
-                document.querySelector('').innerHTML += `
-				
-			`;
-            }
-    
-        })
     });
 };
   
@@ -53,5 +43,14 @@ goToBookings();
 //             });
 //     });
 // };
-  
+fetch('http://localhost:3000/trips')
+.then(response => response.json())
+.then(data => {
+    if(data.trips){
+        document.querySelector('').innerHTML += `
+        
+    `;
+    }
+
+})
 // dsearchTrip();
