@@ -60,7 +60,6 @@ body {
     grid-row-start: 5;
     grid-column-start: 1;
     grid-column-end: 13;
-    /* faire en sorte que les boîtes ne remontent pas quand on ouvre Inspect*/
 }
 
 #left-box {
@@ -122,6 +121,12 @@ body {
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
     margin-left: 100px;
+}
+
+.trip-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 
 img {
