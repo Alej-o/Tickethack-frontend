@@ -21,8 +21,21 @@
         <div id="container-trip">
             <div class="box-cart">
                 <div class="center-box-cart">
-                    <br><br>
-                    <p>No booking yet.<br><br>Why not plan a trip ?</p>
+                    <!-- <br><br>
+                    <p>No booking yet.<br><br>Why not plan a trip ?</p> -->
+                    <div class="new-trip-box">
+                        <h4>My cart</h4>
+                        <div id="new-trip">
+                            <h4>${data.departure} > ${data.arrival}</h4>
+                            <h4>${data.date}</h4>
+                            <h4>${data.price}</h4>
+                            <button type="button" id="btn-delete">X</button>
+                        </div>
+                        <div id="total">
+                            <h4>Total: ${somme totale}euros</h4>
+                            <button type="button" id="btn-purchase">Purchase</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

@@ -19,13 +19,22 @@ function goToCart () {
                     window.location.href = "cart.html";
                     document.querySelector('#container-trip').innerHTML += `
                         <div class="new-trip-box">
-                            <div id="new-trip">
-                                <h4>${data.departure} > ${data.arrival}</h4>
-                                <h4>${data.date}</h4>
-                                <h4>${data.price}</h4>
-                                <button type="button" id="btn-delete">X</button>
+                            <h4>My cart</h4>
+                                <div id="new-trip">
+                                    <h4>${data.departure} > ${data.arrival}</h4>
+                                    <h4>${data.date}</h4>
+                                    <h4>${data.price}</h4>
+                                    <button type="button" id="btn-delete">X</button>
+                                </div>
+                                <div id="total">
+                                    <h4>Total: ${sommetotale/*fonction à créer*/}euros</h4>
+                                    <button type="button" id="btn-purchase">Purchase</button>
+                                </div>
                             </div>
-                        </div>`;
+                        </div>
+                    `
+                    //bouton delete des trips dans Cart, vérifier si ça fonctionne
+                    
                     // document.querySelectorAll('#btn-delete').forEach(btn => {
                     //     btn.addEventListener('click', function(event) {
                     //         event.target.closest('.new-trip-box').remove();

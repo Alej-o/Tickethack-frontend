@@ -165,6 +165,47 @@ p {
     border-radius: 15px;
 }
 
+#new-trip {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: lightgrey;
+    margin-left: 150px;
+    margin-right: 150px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+}
+
+#total {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: darkblue;
+    color: white;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+#btn-delete {
+    color: white;
+    background-color: green;
+    border-radius: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#btn-purchase {
+    color: white;
+    background-color: green;
+    border-radius: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
 /* Page "Bookings" */
 
 #container-bookings {
